@@ -26,9 +26,9 @@ dog.addImage(dog_img);
 function draw() {  
 background(46, 139, 87);
 
-if(keyDown === UP_ARROW){
-  writeStock(food);
-  dog.addImage(happy_img);
+if(keyDown(UP_ARROW))
+{ writeStock(food);
+ dog.addImage(happy_img); 
 }
 
   imageMode(CENTER)
@@ -38,9 +38,11 @@ if(keyDown === UP_ARROW){
   //add styles here
   textSize(20);
   fill(118, 252, 250);
-  text("Note: Press UP_ARROW key to feed the dog",400,370);
+  text("Note: Press UP_ARROW key to feed the dog",50,480);
+
   
-   text("Food remaining : "+foodS,170,200);
+    fill(118, 252, 250);
+   text("Food remaining : "+food,170,200);
 
 }
 function readStock(data){
